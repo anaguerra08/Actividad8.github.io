@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+    <h1>Torneo Academia Stem</h1>
+    <img src="Recursos/AcademiaStem.png" class="foto1">
+    <h3>Votos por proyecto</h3>
+    <p>Categoria IOT</p>
+<br>
+    <h2 id="contador">ITCJ: 0 TEC:0 URN:0 UACJ:0 UACH:0</h2>
+<br>
+    <div class="cont1">
+        <div class="cont2">
+            <img src="Recursos/ITCJ.png" class="logoEscuela">
+            <button name="btn1" class="boton" onclick="votar('ITCJ')">Votar</button>
+        </div>
+        <div class="cont2">
+            <img src="Recursos/TECMI.png" class="logoEscuela">
+            <button name="btn2" class="boton" onclick="votar('TEC')">Votar</button>
+        </div>
+        <div class="cont2">
+            <img src="Recursos/URN.png" class="logoEscuela">
+            <button name="btn3" class="boton" onclick="votar('URN')">Votar</button>
+        </div>
+        <div class="cont2">
+            <img src="Recursos/UACJ.png" class="logoEscuela">
+            <button name="btn4" class="boton" onclick="votar('UACJ')">Votar</button>
+        </div>
+        <div class="cont2">
+            <img src="Recursos/UACH.jpg" class="logoEscuela">
+            <button name="btn5" class="boton" onclick="votar('UACHss')">Votar</button>
+        </div>
+    </div>
+
+    <script>
+        let votos = {
+            ITCJ: 0,
+            TEC: 0,
+            URN: 0,
+            UACJ: 0,
+            UACH: 0
+        };
+
+        function votar(escuela) {
+            votos[escuela]++;
+            actualizarContador();
+        }
+
+        function actualizarContador() {
+            document.getElementById('contador').innerHTML = 
+                `ITCJ: ${votos.ITCJ} TEC: ${votos.TEC} URN: ${votos.URN} UACJ: ${votos.UACJ} UACH: ${votos.UACH}`;
+        }
+    </script>
+    <script src="Java/java.js"></script>
+</body>
+</html>
