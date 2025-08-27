@@ -1,0 +1,9 @@
+function showRegisterForm() {
+    document.getElementById('login-form').style.display = 'none';
+    document.getElementById('register-form-container').style.display = 'block';
+}
+
+function showLoginForm() {
+    document.getElementById('login-form').style.display = 'block';
+    document.getElementById('register-form-container').style.display = 'none';
+}
