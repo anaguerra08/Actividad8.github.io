@@ -14,15 +14,15 @@
                 <h2>Iniciar sesión</h2>
             </div>
 
-            <form id="login-form" action="/login" method="POST">
+            <form id="login-form" action="login.php" method="POST">
                 <input type="email" id="login-email" name="email" placeholder="Correo electrónico" required>
                 <input type="password" id="login-password" name="password" placeholder="Contraseña" required>
                 <button type="submit">Entrar</button>
             </form>
 
-            <div class="switch-form">
-                <span>¿No tienes cuenta? <a href="javascript:void(0);" onclick="showRegisterForm()">Regístrate</a></span>
-            </div>
+            <br>
+        <p>Correo: admin@mail.com</p>
+        <p>Contraseña: 12345</p>
         </div>
 
         <div class="form-container" id="register-form-container" style="display: none;">
@@ -30,7 +30,7 @@
                 <h2>Registrarse</h2>
             </div>
 
-            <form id="register-form" action="/register" method="POST">
+            <form id="register-form" action="register.php" method="POST">
                 <input type="text" id="register-name" name="name" placeholder="Nombre completo" required>
                 <input type="email" id="register-email" name="email" placeholder="Correo electrónico" required>
                 <input type="password" id="register-password" name="password" placeholder="Contraseña" required>
@@ -43,6 +43,6 @@
         </div>
     </div>
 
-    <script src="registroJava.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
